@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Барбершоп Бородинский Работы</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+	<body>
+		
+		<header class="page-header">
+			<div class="page-header__logo">
+				<picture>
+					<source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/logotype-tablet.png">
+					<source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+					<img src="img/logotype-mobile.png" alt="Барбершоп Бородинский">
+				</picture>
+			</div>
+			
+			<nav class="page-header__menu  page-header__menu--opened  page-header__menu--nojs">
+				<div class="wrapper-center">
+					<ul class="page-header__container-left">
+						<li class="page-header__item"><a href="index.html">Главная</a></li>
+						<li class="page-header__item"><a href="works.html">Наши работы</a></li>
+						<li class="page-header__item  page-header__item--current"><a href="#">Записаться</a></li>
+						<li class="page-header__item"><a href="#">Контакты</a></li>
+						<li class="page-header__item"><a href="#">HelloWorld Studio</a></li>
+						<li class="page-header__btnMenu">
+							<button type="button" class="page-header__btnMenu"></button>
+						</li>
+					</ul>
+					<ul class="page-header__container-right">
+						<li class="page-header__item  page-header__item--user-block"><a href="login-nojs.html">Вход</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main class="page-main">
+
+      <section class="enroll">
+        <div class="wrapper-center">
+          <h1>Запись на стрижку</h1>
+          <a href="index.html" class="btn  btn--to-home">На главную</a>
+          <form class="enroll__form" action="http://httpbin.org/post" method="post">
+            
+            <fieldset class="enroll__contact-details">
+              <div class="fieldset-flex-inner-wrapper">
+                <input type="text" name="lastname" placeholder="Фамилия" class="enroll__lastname" required><!-- 
+                 --><input type="text" name="firstname" placeholder="Имя" class="enroll__firstname" required><!-- 
+                 --><input type="text" name="patronymic" placeholder="Отчество" class="enroll__patronymic"><!-- 
+    
+                 --><input type="text" name="phone-number" placeholder="Контактный телефон" class="enroll__phone-num" required><!-- 
+                 --><input type="email" name="email" placeholder="Контактный e-mail" class="enroll__email">
+              </div>
+  
+              <textarea name="add-info" cols="30" rows="10" placeholder="Доп. информация для мастера"></textarea>
+            </fieldset>
+  
+            <fieldset class="enroll__beard-type">
+              <legend class="enroll__field-header"><h2>Выберите модель бороды:</h2></legend>
+
+              <ul>
+                <li>
+                  <input type="radio" name="beard-type" id="admiral" value="admiral" checked>
+                  <label for="admiral" class="enroll__beard-type-radio  enroll__beard-type-radio--admiral">Адмирал</label>
+                </li>
+                <li>
+                  <input type="radio" name="beard-type" id="lumberjack" value="lumberjack">
+                  <label for="lumberjack" class="enroll__beard-type-radio  enroll__beard-type-radio--lumberjack">Лесоруб</label>
+                </li>
+                <li>
+                  <input type="radio" name="beard-type" id="polar" value="polar">
+                  <label for="polar" class="enroll__beard-type-radio  enroll__beard-type-radio--polar">Полярник</label>
+                </li>
+                <li>
+                  <input type="radio" name="beard-type" id="boyar" value="boyar">
+                  <label for="boyar" class="enroll__beard-type-radio  enroll__beard-type-radio--boyar">Боярин</label>
+                </li>
+                <li>
+                  <input type="radio" name="beard-type" id="wise-old-man" value="wise-old-man">
+                  <label for="wise-old-man" class="enroll__beard-type-radio  enroll__beard-type-radio--wise-old-man">Мудрец</label>
+                </li>
+              </ul>
+
+            </fieldset>
+  
+            <fieldset class="enroll__extra-service">
+              <legend class="enroll__field-header"><h2>Дополнительные услуги:</h2></legend>
+
+              <ul>
+                <li>
+                  <input type="checkbox" name="with-dye" id="with-dye" value="true" checked>
+                  <label for="with-dye" class="enroll__extra-serv-check">Подкрасить бороду</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="with-twist-a-mustache" id="with-twist-a-mustache" value="true" checked>
+                  <label for="with-twist-a-mustache" class="enroll__extra-serv-check">Накрутить усы</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="with-comb-a-beard" id="with-comb-a-beard" value="true">
+                  <label for="with-comb-a-beard" class="enroll__extra-serv-check">Причесать бороду</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="with-direct-temple" id="with-direct-temple" value="true">
+                  <label for="with-direct-temple" class="enroll__extra-serv-check">Подровнять виски</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="with-cleared-graing" id="with-cleared-graing" value="true">
+                  <label for="with-cleared-graing" class="enroll__extra-serv-check">Убрать седину</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="with-polished-bald" id="with-polished-bald" value="true">
+                  <label for="with-polished-bald" class="enroll__extra-serv-check">Отполировать лысину</label>
+                </li>
+              </ul>
+            </fieldset>
+            
+            <button class="btn btn--submit" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+
+      </section>
+      
+		</main>
+
+		<footer class="page-footer">
+			<div class="wrapper-center">
+				<section class="page-footer__contact">
+					<b>Барбершоп Бородинский</b>
+					<p class="page-main__text page-main__text--small">
+							Адрес: г.Киев, Крещатик, 38 <br>
+					</p>
+					<a href="tel:+30001234567" class="btn btn--tel">+3 (000) 123-45-67</a>
+				</section>
+	
+				<section class="page-footer__social-btns">
+					<a href="#" class="btn btn--social btn--vk">вконтакте</a>
+					<a href="#" class="btn btn--social btn--fs">facebook</a>
+					<a href="#" class="btn btn--social btn--ins">instagram</a>
+				</section>
+	
+				<section class="page-footer__copyright">
+					<p class="page-main__text page-main__text--small">Разработано</p>
+					<a href="#" class="btn btn--copyright">HelloWorld Studio</a>
+				</section>
+			</div>
+    </footer>
+    <!-- modal popups -->
+		<div class="modal">
+			<div class="modal__content">
+				<section class="login">
+					<h1>Личный кабинет</h1>
+					<p class="page-main__text">Введите свой логин и пароль, чтобы войти</p>
+					<form class="login__form" action="#" method="post">
+						<input type="text" class="login__name" name="login" placeholder="Логин" required>
+						<input type="password" class="login__pass" name="password" placeholder="Пароль" required>
+						<input type="checkbox" name="remember-me" value="true" id="remember-me">
+						<label for="remember-me" class="login__remember-check">Запомните меня</label>
+						<a href="#">Я забыл пароль!</a>
+						<button type="submit" class="btn  btn--submit">Войти</button>
+						<button type="button" class="btn  btn--clear-bg">Закрыть</button>
+					</form>
+				</section>
+				<div class="modal__close"></div>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
